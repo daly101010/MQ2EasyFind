@@ -791,10 +791,10 @@ void DrawEasyFindSettingsPanel()
 	ImGui::SetNextItemWidth(100.0f);
 	if (ImGui::BeginCombo("##Navigation Log Level", spdlog::level::to_string_view(currentValue).data(), ImGuiComboFlags_HeightSmall))
 	{
-		for (size_t n = 0; n < lengthof(spdlog::level::level_string_views); ++n)
+		for (size_t n = 0; n < (size_t)spdlog::level::n_levels; ++n)
 		{
 			const bool is_selected = n == (int)currentValue;
-			if (ImGui::Selectable(spdlog::level::level_string_views[n].data(), is_selected))
+			if (ImGui::Selectable(spdlog::level::to_string_view((spdlog::level::level_enum)n).data(), is_selected))
 			{
 				g_configuration->SetNavLogLevel((spdlog::level::level_enum)n);
 			}

@@ -2,7 +2,7 @@
 #include "EasyFind.h"
 #include "EasyFindConfiguration.h"
 
-#include "MQ2Nav/PluginAPI.h"
+#include "../MQ2Nav/PluginAPI.h"
 
 static nav::NavAPI* s_nav = nullptr;
 static int s_navObserverId = 0;
