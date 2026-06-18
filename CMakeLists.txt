@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------------
 # Props file includes
 # ---------------------------------------------------------------------
-include("../../Plugin.cmake")
+include("../../src/Plugin.cmake")
 find_package(luajit REQUIRED)
 find_package(sol2 REQUIRED)
 
